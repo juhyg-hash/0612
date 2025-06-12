@@ -1,17 +1,22 @@
-import java.util.Scanner;
-
+class Animal{
+    String name;
+    public Animal(String name){
+        this.name = name;
+    }
+    public void printName(String name){
+        System.out.println("Animal name :"+ name);
+    }
+}
+class Dog extends Animal{
+    String breed;
+    public Dog(String name, String breed){
+        super(name);
+        this.breed = breed;
+        }
+    }
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("나이를 입력하시오");
-        int  age = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("이름을 입력하세요: ");
-        String name  = scanner.nextLine();
-        scanner.close();
-        System.out.printf("나이: %d, 이름 %s",age,name);
-
-
+        Dog dog = new Dog("도그","dog");
+        dog.printName("독도");
     }
 }
